@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Calendar</title>
+    <link rel="stylesheet" type="text/css" href="Calendar.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="loginField">
+      <input type="text" id="username" name="username" required>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" id="login_btn" value="log in">
+      <script src="Login.js" defer></script>
+    </div>
+    <div id="registerField">
+      <input type="submit" id="register_btn" value="register">
+    </div>
+    <div id="logoutField">
+      <span id="greeting"></span>
+      <input type="submit" id="logout_btn" value="logout">
+    </div>
+
+    <br>
+    <div id="calendarField">
+      <h1>some header</h1>
+      <table id="myCalendar">
+	<tr id="header">
+	  <th>Sunday</th>
+	  <th>Monday</th>
+	  <th>Tuesday</th>
+	  <th>Wednesday</th>
+	  <th>Thursday</th>
+	  <th>Friday</th>
+	  <th>Saturday</th>
+	</tr>
+      </table>
+      <script src="Date.js" defer></script>
+    </div>
+    <div id="calenBtnField">
+      <button id="prev_month_btn">previous month</button>
+      <button id="next_month_btn">next month</button><br>
+    </div>
+    <div id="eventBtnField">
+      <button id="addEventButton">add event</button>
+      <button id="modifyEventButton" disabled>modify event</button>
+      <button id="deleteEventButton" disabled>delete event</button>
+    </div>
+    
+    <br><br>
+    <div id="eventField">
+      <fieldset>
+      <legend>Events</legend>
+      <label for="eventTitle">Title: </label>
+      <input type="text" name="title" id="eventTitle"> <br>
+      <label for="eventDate">Date: </label>
+      <input type="date" name="date" id="eventDate"> <br>
+      <label for="eventTime">Time: </label>
+      <input type="time" name="time" id="eventTime"> <br>
+      <label>Tags: </label>
+      <input type="radio" name="tag" id="w" value="w"> work
+      <input type="radio" name="tag" id="l" value="l"> learning
+      <input type="radio" name="tag" id="p" value="p"> personal
+      <input type="radio" name="tag" id="s" value="s"> social
+      <input type="radio" name="tag" id="none" value="a"> none <br>
+      
+      <input type="hidden" id="eventToken" name="token" value="">
+      <input type="submit" id="submitEvent" value="Submit Event">
+      </fieldset>
+      <script src="Event.js" defer></script>
+    </div>
+  </body>
+</html>
